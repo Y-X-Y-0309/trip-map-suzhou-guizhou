@@ -424,42 +424,59 @@ const DAYS = [
     ]
   },
   {
-    id: 6, label: 'D6', date: '10/3 周六', title: '龙里摆惹村 · 大地之心环线', color: '#34c759',
+    id: 6, label: 'D6', date: '10/3 周六', title: '贵阳市区 · 轻松吃逛', color: '#ff9500',
     locations: [
       {
-        name: '贵阳→摆惹村（单日车往返）', lat: 26.4718, lng: 106.9632, type: 'transport', time: '07:30',
-        desc: '贵阳出发约50-65km/1-1.5小时（往龙里方向）。',
-        detail: '两种走法：① 直接叫单日包车/网约车往返（最省事，推荐；务必约好返程时间）；② 动车 贵阳北→龙里北约30分钟，再打车 20-30km/35-50分钟。\n末端 1-2 公里是碎石土路，普通轿车慎入，可让司机停大路步行进去。\n村里没有网约车兜底，返程必须提前和司机约好。',
-        gmap: '龙里县摆惹村'
+        name: '黔灵山公园', lat: 26.6010, lng: 106.6890, type: 'spot', time: '09:30',
+        desc: '免费公园，看猴子、爬爬山；慢逛 2 小时，节奏轻松。',
+        budget: '免费（索道另收）',
+        xhsKeyword: '贵阳黔灵山公园', gmap: '贵阳黔灵山公园'
       },
       {
-        name: '摆惹村 · 大地之心/红心湖', lat: 26.3800, lng: 106.9325, type: 'spot', time: '09:30',
-        desc: '免费野生点：红心湖“大地之心”+摆惹瀑布+高山草甸风车群（紧邻龙里大草原）。',
-        budget: '免费',
-        detail: '环线：摆惹村停车点→摆惹瀑布→峡谷林荫道→高山草甸（风车群）→大地之心→环回，约10-12km/4-5小时，累计爬升500-600米。\n装备：防滑徒步鞋+登山杖+2L水+路餐；谷内信号弱，提前在“两步路”下载离线轨迹。\n禁忌：湖水富含矿物质，严禁下水；雨后谷底湿滑、碎石多，雨天改期。\n拍照：“大地之心”地面只能看到红色水面，拍出心形必须带无人机。\n（坐标为近似值，导航请搜“龙里县摆惹村”，勿选到惠水同名地）',
-        pay: { cash: 0.5 },
-        xhsKeyword: '龙里摆惹村 大地之心', gmap: '龙里县摆惹村'
-      },
-      {
-        name: '午餐 · 自备路餐（谷内无补给）', lat: 26.3800, lng: 106.9325, type: 'food', time: '—',
-        desc: '原始野线无小卖部和卫生间：带足 2L 水与高热量路餐。',
-        dianping: false, gmap: '龙里县摆惹村'
-      },
-      {
-        name: '晚餐 · 贵阳老城', lat: 26.5835, lng: 106.7105, type: 'food', time: '19:30',
-        desc: '回贵阳吃：酸汤鱼/丝娃娃；想逛夜市去青云市集。',
+        name: '午餐 · 金牌罗记肠旺面（蔡家街）', lat: 26.5852, lng: 106.7128, type: 'food', time: '12:00',
+        desc: '老字号肠旺面；不想吃面就换丝恋红汤丝娃娃。',
         pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '贵阳青云市集', gmap: '贵阳老城'
+        dianpingKeyword: '金牌罗记肠旺面', gmap: '贵阳蔡家街'
       },
       {
-        name: '贵阳酒店（第2晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '21:00',
-        desc: '明天退房，玩市区后去机场。',
+        name: '甲秀楼 · 南明河', lat: 26.5808, lng: 106.7158, type: 'spot', time: '14:00',
+        desc: '白天看楼+沿南明河散步，旁边就是老城商圈。',
+        budget: '免费',
+        xhsKeyword: '贵阳甲秀楼', gmap: '贵阳 甲秀楼'
+      },
+      {
+        name: '下午茶 · 老城咖啡馆', lat: 26.5820, lng: 106.7120, type: 'drink', time: '15:30',
+        desc: '老城/文昌阁一带咖啡馆多，坐着歇脚。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '贵阳 咖啡馆', gmap: '贵阳老城'
+      },
+      {
+        name: '晚餐 · 老凯俚酸汤鱼', lat: 26.5835, lng: 106.7105, type: 'food', time: '18:30',
+        desc: '苗家红酸汤锅底，配几个贵州小吃。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '老凯俚酸汤鱼', gmap: '贵阳老城'
+      },
+      {
+        name: '青云市集夜市', lat: 26.5685, lng: 106.7113, type: 'spot', time: '20:30',
+        desc: '夜市逛吃：烤脑花、豆腐圆子、冰浆、裹卷。',
+        budget: '丰俭由人',
+        xhsKeyword: '贵阳青云市集', gmap: '贵阳青云市集'
+      },
+      {
+        name: '贵阳酒店（第2晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '22:00',
+        desc: '明天退房，玩到下午再去机场。',
         pay: { alipay: 1, wechat: 1 }, gmap: '贵阳 大十字'
+      },
+      {
+        name: '备选 · 青岩古镇', lat: 26.3340, lng: 106.6825, type: 'spot', time: '—',
+        desc: '想出门走走：古镇约30km/50分钟，青岩猪脚、玫瑰糖；古镇→机场约40分钟。',
+        budget: '门票约¥10',
+        xhsKeyword: '青岩古镇', gmap: '青岩古镇'
       }
     ]
   },
   {
-    id: 7, label: 'D7', date: '10/4 周日 · 20:05 返程', title: '贵阳老城溜达 → 机场', color: '#8e8e93',
+    id: 7, label: 'D7', date: '10/4 周日 · 20:05 返程', title: '贵阳吃逛收尾 → 机场', color: '#8e8e93',
     locations: [
       {
         name: '退房 · 贵阳北站寄存行李', lat: 26.6228, lng: 106.6724, type: 'transport', time: '10:00',
@@ -468,29 +485,28 @@ const DAYS = [
         gmap: '贵阳北站'
       },
       {
-        name: '午餐 · 贵阳老城', lat: 26.5835, lng: 106.7105, type: 'food', time: '12:00',
-        desc: '肠旺面 / 丝娃娃 / 酸汤鱼；顺路买刺梨汁、辣椒面等伴手礼。',
+        name: '早午餐 · 贵阳小吃收尾', lat: 26.5852, lng: 106.7128, type: 'food', time: '11:30',
+        desc: '肠旺面 / 丝娃娃 / 酸汤鱼，把没吃到的补上。',
         pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '金牌罗记肠旺面', gmap: '贵阳老城'
+        dianpingKeyword: '丝恋红汤丝娃娃', gmap: '贵阳老城'
       },
       {
-        name: '甲秀楼 · 南明河', lat: 26.5808, lng: 106.7158, type: 'spot', time: '13:30',
-        desc: '白天版甲秀楼+浮玉桥，沿南明河散步；也可换黔灵山公园。',
+        name: '老城闲逛 · 文昌阁一带', lat: 26.5855, lng: 106.7130, type: 'spot', time: '13:00',
+        desc: '老城街区随便走走，茶馆/咖啡馆坐坐。',
         budget: '免费',
-        xhsKeyword: '贵阳甲秀楼', gmap: '贵阳 甲秀楼'
+        xhsKeyword: '贵阳文昌阁', gmap: '贵阳老城'
+      },
+      {
+        name: '买伴手礼 · 刺梨汁/辣椒面/脆哨', lat: 26.5840, lng: 106.7090, type: 'spot', time: '15:00',
+        desc: '超市或老城特产店：刺梨汁、糊辣椒面、脆哨、玫瑰糖。',
+        budget: '丰俭由人',
+        gmap: '贵阳老城'
       },
       {
         name: '备选 · 黔灵山公园', lat: 26.6010, lng: 106.6890, type: 'spot', time: '—',
-        desc: '想看猴子、想爬山就换这个：免费公园，慢逛2小时。',
+        desc: '想再看猴子就上午去，逛完再回老城吃东西。',
         budget: '免费（索道另收）',
         xhsKeyword: '贵阳黔灵山公园', gmap: '贵阳黔灵山公园'
-      },
-      {
-        name: '备选 · 青岩古镇', lat: 26.3340, lng: 106.6825, type: 'spot', time: '—',
-        desc: '想跑远一点：古镇约30km/50分钟，青岩猪脚、玫瑰糖；古镇→机场约40分钟。',
-        budget: '门票约¥10',
-        detail: '去青岩前先取行李会绕路，建议把行李寄存在机场或直接带上；玩到 16:30 往机场走。',
-        xhsKeyword: '青岩古镇', gmap: '青岩古镇'
       },
       {
         name: '贵阳北 → 龙洞堡机场', lat: 26.5410, lng: 106.8020, type: 'transport', time: '17:15',
@@ -508,7 +524,7 @@ const DAYS = [
 
 function overviewContent() {
   return `
-<div class="hero"><h1>苏州→贵州西线 · 7天6晚小众野行</h1><p class="subtitle">羊皮洞瀑布 · 铜鼓荡 · 万峰顶 · 大圣之眼 · 牛倒岩 · 桃子凹 · 紫云格凸河 · 龙里摆惹村<br>9/28–10/4 · 2人经济型 · 无包车自驾</p></div>
+<div class="hero"><h1>苏州→贵州西线 · 7天6晚小众野行</h1><p class="subtitle">羊皮洞瀑布 · 铜鼓荡 · 万峰顶 · 大圣之眼 · 牛倒岩 · 桃子凹 · 紫云格凸河 · 贵阳慢逛吃<br>9/28–10/4 · 2人经济型 · 无包车自驾</p></div>
 <div class="info-grid">
   <div class="info-card"><div class="label">大本营</div><div class="value">安顺4晚（9/28-10/1）+ 贵阳2晚（10/2-10/3）</div></div>
   <div class="info-card"><div class="label">往返航班</div><div class="value">去 9/28 19:55 到贵阳 / 回 10/4 20:05 贵阳起飞</div></div>
@@ -518,12 +534,11 @@ function overviewContent() {
 <div class="section-head">行程概览</div>
 <div class="day-list">${DAYS.slice(1).map(d=>`<div class="card" onclick="go(${d.id})"><div class="name"><span class="dot" style="background:${d.color}"></span>${d.label} · ${d.title}</div><div class="desc">${d.date}</div></div>`).join('')}</div>
 <div class="section-head">重点提醒</div>
-<div class="pay-summary"><h4 class="warn">免费野点风险</h4>羊皮洞/铜鼓荡/大圣之眼/桃子凹/摆惹村均为未开发点位：无官方救援与门票管理，雨天禁入，垃圾随身带走，天黑前撤出。</div>
-<div class="pay-summary"><h4 class="warn">摆惹村注意</h4>野生无补给、谷内信号弱：务必提前下载离线轨迹；湖水富含矿物质严禁下水；“大地之心”心形要无人机航拍才看得到；最后1-2公里碎石路，普通轿车慎入，建议直接约单日车。</div>
+<div class="pay-summary"><h4 class="warn">免费野点风险</h4>羊皮洞/铜鼓荡/大圣之眼/桃子凹均为未开发点位：无官方救援与门票管理，雨天禁入，垃圾随身带走，天黑前撤出。</div>
 <div class="pay-summary"><h4 class="warn">落地当晚转安顺</h4>9/28 落地后直接走：机场→贵阳北站→动车到安顺西（末班约22:45），赶不上就打车直达；当晚 22:30-23:00 能到酒店，别在贵阳多住一晚。</div>
 <div class="pay-summary"><h4 class="warn">末班车红线</h4>D4（10/1）格凸河：紫云→安顺客运末班约17:30-18:00，最晚15:00必须出景区返程。</div>
 <div class="pay-summary"><h4 class="warn">行李动线</h4>全程只需搬 2 次行李：9/28 机场→安顺、10/2 安顺→贵阳；其余每天当日往返，行李都留酒店。10/4 在贵阳玩，把行李寄存在贵阳北站智能柜（约10-20元/天）。</div>
-<div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>国庆机票/酒店提前订（经济型房紧）；动车票（9/28 贵阳北→安顺西、10/2 安顺西→贵阳北）在12306抢；格凸河门票官方预约；摆惹村/羊皮洞 提前下载离线轨迹、约好单日车；野点备少量现金。</div>
+<div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>国庆机票/酒店提前订（经济型房紧）；动车票（9/28 贵阳北→安顺西、10/2 安顺西→贵阳北）在12306抢；格凸河门票官方预约；羊皮洞提前下载离线轨迹；野点备少量现金。</div>
 <div class="pay-summary"><h4>地图说明</h4>坐标已尽量校准到 OSM 徒步道口/村点；仍标注“近似”的为乡镇级坐标，导航请以卡片内“高德”为准（直接搜店名/点位更稳）。餐厅候选为网络初筛，出发前请以大众点评当日评分与排队为准。</div>
 <div class="section-head">图例</div>
 <div class="legend">
