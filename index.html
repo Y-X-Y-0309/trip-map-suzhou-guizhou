@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>苏州→贵州西线 · 7天6晚小众野行地图</title>
+<title>上海→贵州西线 · 7天6晚小众野行地图</title>
 <meta name="description" content="羊皮洞瀑布/铜鼓荡/大圣之眼/牛倒岩/万峰顶/桃子凹/紫云格凸河 · 贵阳安顺双大本营 · 2026国庆参考行程">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -247,7 +247,7 @@ const DAYS = [
       {
         name: '抵达 · 贵阳龙洞堡机场', lat: 26.5410, lng: 106.8020, type: 'transport', time: '19:55',
         desc: '19:55 落地；当晚直接转去安顺，不在贵阳停留。',
-        detail: '推荐：机场→贵阳北站（地铁/打车约40-50分钟）→ 动车 贵阳北→安顺西（20-35分钟，末班约22:45）→ 打车15-20分钟到酒店，预计 22:30-23:00 到店。\n备选：机场→安顺便民快巴（T2 一楼11号门外，09:00-21:00 每约60分钟一班，1小时40分，约40元），落地晚了可能赶不上末班。\n最省事：机场直接打车/网约车到安顺（约1.5-2小时，费用较高）。',
+        detail: '去程：上海虹桥/浦东 直飞 贵阳龙洞堡，飞行约2.5-3小时（机场→市区段按下面走）。\n推荐：机场→贵阳北站（地铁/打车约40-50分钟）→ 动车 贵阳北→安顺西（20-35分钟，末班约22:45）→ 打车15-20分钟到酒店，预计 22:30-23:00 到店。\n备选：机场→安顺便民快巴（T2 一楼11号门外，09:00-21:00 每约60分钟一班，1小时40分，约40元），落地晚了可能赶不上末班。\n最省事：机场直接打车/网约车到安顺（约1.5-2小时，费用较高）。',
         gmap: '贵阳龙洞堡国际机场'
       },
       {
@@ -509,9 +509,9 @@ const DAYS = [
         xhsKeyword: '贵阳黔灵山公园', gmap: '贵阳黔灵山公园'
       },
       {
-        name: '贵阳北 → 龙洞堡机场', lat: 26.5410, lng: 106.8020, type: 'transport', time: '17:15',
-        desc: '取回寄存行李后去机场，17:45-18:15 到达；20:05 起飞。',
-        detail: '国内航班提前2小时；国庆末段安检排队久，别卡点。',
+        name: '龙洞堡机场 → 上海（返程）', lat: 26.5410, lng: 106.8020, type: 'transport', time: '17:15',
+        desc: '取回寄存行李后去机场，17:45-18:15 到达；20:05 起飞回上海（虹桥/浦东）。',
+        detail: '国内航班提前2小时；国庆末段安检排队久，别卡点。\n飞行约2.5-3小时，落地后按需提前约车或查末班地铁。',
         gmap: '贵阳龙洞堡国际机场'
       }
     ]
@@ -524,10 +524,10 @@ const DAYS = [
 
 function overviewContent() {
   return `
-<div class="hero"><h1>苏州→贵州西线 · 7天6晚小众野行</h1><p class="subtitle">羊皮洞瀑布 · 铜鼓荡 · 万峰顶 · 大圣之眼 · 牛倒岩 · 桃子凹 · 紫云格凸河 · 贵阳慢逛吃<br>9/28–10/4 · 2人经济型 · 无包车自驾</p></div>
+<div class="hero"><h1>上海→贵州西线 · 7天6晚小众野行</h1><p class="subtitle">羊皮洞瀑布 · 铜鼓荡 · 万峰顶 · 大圣之眼 · 牛倒岩 · 桃子凹 · 紫云格凸河 · 贵阳慢逛吃<br>9/28–10/4 · 2人经济型 · 无包车自驾</p></div>
 <div class="info-grid">
   <div class="info-card"><div class="label">大本营</div><div class="value">安顺4晚（9/28-10/1）+ 贵阳2晚（10/2-10/3）</div></div>
-  <div class="info-card"><div class="label">往返航班</div><div class="value">去 9/28 19:55 到贵阳 / 回 10/4 20:05 贵阳起飞</div></div>
+  <div class="info-card"><div class="label">往返航班</div><div class="value">上海↔贵阳：去 9/28 19:55 到贵阳 / 回 10/4 20:05 贵阳起飞</div></div>
   <div class="info-card"><div class="label">交通方式</div><div class="value">城际动车为主 + 景点网约车当日往返，行李留酒店</div></div>
   <div class="info-card"><div class="label">人均预算</div><div class="value">往返大交通1200-2000 · 住宿约1300 · 门票餐费另计（以实际为准）</div></div>
 </div>
@@ -539,7 +539,7 @@ function overviewContent() {
 <div class="pay-summary"><h4 class="warn">羊皮洞要上午去</h4>往返约 5.5-6 小时（车程 3h + 徒步 1.5-2h + 停留 30-60min）：07:30 前出发，13:30-14:00 能回贵阳；下午去容易摸黑走盘山村道。</div>
 <div class="pay-summary"><h4 class="warn">末班车红线</h4>D4（10/1）格凸河：紫云→安顺客运末班约17:30-18:00，最晚15:00必须出景区返程。</div>
 <div class="pay-summary"><h4 class="warn">行李动线</h4>全程只需搬 2 次行李：9/28 机场→安顺、10/2 安顺→贵阳；其余每天当日往返，行李都留酒店。10/4 在贵阳玩，把行李寄存在贵阳北站智能柜（约10-20元/天）。</div>
-<div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>国庆机票/酒店提前订（经济型房紧）；动车票（9/28 贵阳北→安顺西、10/2 安顺西→贵阳北）在12306抢；格凸河门票官方预约；羊皮洞提前下载离线轨迹；野点备少量现金。</div>
+<div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>上海↔贵阳机票、酒店提前订（经济型房紧）；动车票（9/28 贵阳北→安顺西、10/2 安顺西→贵阳北）在12306抢；格凸河门票官方预约；羊皮洞提前下载离线轨迹；野点备少量现金。</div>
 <div class="pay-summary"><h4>地图说明</h4>坐标已尽量校准到 OSM 徒步道口/村点；仍标注“近似”的为乡镇级坐标，导航请以卡片内“高德”为准（直接搜店名/点位更稳）。餐厅候选为网络初筛，出发前请以大众点评当日评分与排队为准。</div>
 <div class="section-head">图例</div>
 <div class="legend">
