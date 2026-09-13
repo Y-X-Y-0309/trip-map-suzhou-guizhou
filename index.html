@@ -262,6 +262,18 @@ const DAYS = [
         detail: '安顺小吃正式开吃放到明天。',
         pay: { alipay: 1, wechat: 1, cash: 0.5 },
         dianpingKeyword: '安顺羊肉粉', gmap: '安顺市西秀区'
+      },
+      {
+        name: '备选 · 伍毛烧烤（夜宵）', lat: 26.2465, lng: 105.9445, type: 'food', time: '—',
+        desc: '安顺夜宵烧烤，市区内；到得早可以去接一顿。',
+        pay: { cash: 0.5, alipay: 1, wechat: 1 },
+        dianpingKeyword: '伍毛烧烤', gmap: '伍毛烧烤 安顺'
+      },
+      {
+        name: '备选 · 宫鼎茶（奶茶）', lat: 26.2460, lng: 105.9450, type: 'drink', time: '—',
+        desc: '安顺本土奶茶，市区门店多；落地太晚可能已打烊，不行就明后天顺路买。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '宫鼎茶', xhsKeyword: '安顺宫鼎茶', gmap: '宫鼎茶 安顺'
       }
     ]
   },
@@ -277,17 +289,23 @@ const DAYS = [
         xhsKeyword: '铜鼓荡 安顺徒步', gmap: '铜鼓荡 安顺'
       },
       {
-        name: '晚餐 · 夺夺粉（顾府街商圈）', lat: 26.2460, lng: 105.9455, type: 'food', time: '18:30',
+        name: '晚餐 · 远山烧椒牛肉', lat: 26.2470, lng: 105.9460, type: 'food', time: '18:30',
+        desc: '安顺本地口碑店：烧椒+牛肉，下饭；铜鼓荡回来正好在市区吃。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '远山烧椒牛肉', gmap: '远山烧椒牛肉 安顺'
+      },
+      {
+        name: '备选 · 夺夺粉（顾府街商圈）', lat: 26.2460, lng: 105.9455, type: 'food', time: '—',
         desc: '老字号：龙老太味全夺夺粉 / 笔记安顺夺夺粉，酸辣砂锅。',
-        detail: '夺夺粉=竹签戳着吃的酸辣砂锅，配米饭+刺梨汁解辣。\n同商圈可顺路加：李玲大嘴裹卷（默认含折耳根可免）、小舒冰浆。',
+        detail: '夺夺粉=竹签戳着吃的酸辣砂锅，配米饭+刺梨汁解辣。',
         pay: { alipay: 1, wechat: 1, cash: 0.5 },
         dianpingKeyword: '龙老太味全夺夺粉', gmap: '安顺顾府街'
       },
       {
-        name: '备选 · 儒林路夜宵小摊', lat: 26.2448, lng: 105.9435, type: 'food', time: '—',
-        desc: '古街夜市：裹卷、豆腐圆子、油炸粑稀饭、冰浆。',
+        name: '备选 · 新天地 · 黔浆记冰浆', lat: 26.2455, lng: 105.9480, type: 'drink', time: '—',
+        desc: '饭后甜饮：安顺糯米冰浆代表店，新天地商业街一带，推荐芒果味。',
         pay: { alipay: 1, wechat: 1, cash: 0.5 },
-        dianpingKeyword: '安顺儒林路', gmap: '安顺儒林路'
+        dianpingKeyword: '黔浆记冰浆', xhsKeyword: '安顺黔浆记冰浆', gmap: '黔浆记冰浆 安顺新天地'
       }
     ]
   },
@@ -334,10 +352,16 @@ const DAYS = [
         xhsKeyword: '安顺桃子凹', gmap: '安顺桃子凹'
       },
       {
-        name: '晚餐 · 好吃街夜宵', lat: 26.2430, lng: 105.9440, type: 'food', time: '20:30',
-        desc: '回市区吃：南马广场/好吃街大排档，烙锅、烤鱼、小龙虾。',
-        pay: { alipay: 1, wechat: 1, cash: 0.5 },
-        dianpingKeyword: '安顺烙锅', gmap: '安顺好吃街'
+        name: '晚餐 · 黔味红豆火锅野菜馆', lat: 26.2480, lng: 105.9455, type: 'food', time: '19:30',
+        desc: '四点环线回市区吃：红豆火锅+野菜，口味相对温和，适合爬了一天。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '黔味红豆火锅野菜馆', gmap: '黔味红豆火锅野菜馆 安顺'
+      },
+      {
+        name: '备选 · 朱古记关岭带皮牛肉馆', lat: 26.2440, lng: 105.9490, type: 'food', time: '—',
+        desc: '安顺特色牛馆：关岭带皮牛肉（清汤/黄焖）。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '朱古记关岭带皮牛肉馆', gmap: '朱古记关岭带皮牛肉 安顺'
       },
       {
         name: '安顺大本营（第3晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '21:30',
@@ -374,10 +398,16 @@ const DAYS = [
         pay: { alipay: 1, wechat: 1 }, gmap: '安顺市西秀区'
       },
       {
-        name: '晚餐 · 顾府街小吃补漏', lat: 26.2455, lng: 105.9460, type: 'food', time: '19:30',
-        desc: '补前几天没吃到的：破酥包、油炸粑稀饭、荞凉粉。',
-        pay: { alipay: 1, wechat: 1, cash: 0.5 },
-        dianpingKeyword: '安顺顾府街', gmap: '安顺顾府街'
+        name: '晚餐 · 刘老实片片鱼（含芒果冰浆）', lat: 26.2445, lng: 105.9430, type: 'food', time: '19:30',
+        desc: '格凸河回来吃鱼：老牌片片鱼/酸汤鱼，招牌之后来一杯芒果冰浆。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '刘老实片片鱼', gmap: '刘老实片片鱼 安顺'
+      },
+      {
+        name: '备选 · 花江活鱼王', lat: 26.2430, lng: 105.9470, type: 'food', time: '—',
+        desc: '同为正餐鱼锅：活鱼现杀，花江风味，二选一。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '花江活鱼王', gmap: '花江活鱼王 安顺'
       }
     ]
   },
@@ -415,10 +445,16 @@ const DAYS = [
         dianpingKeyword: '贵阳 咖啡馆', gmap: '贵阳老城'
       },
       {
-        name: '晚餐 · 老凯俚酸汤鱼', lat: 26.5835, lng: 106.7105, type: 'food', time: '18:30',
-        desc: '苗家红酸汤锅底，配几个贵州小吃。',
+        name: '晚餐 · 玉珍酸笋火锅（北京路店）', lat: 26.5945, lng: 106.7065, type: 'food', time: '18:30',
+        desc: '云岩区北京路银海元隆10栋底商，离老城/黔灵山都近；酸笋锅底，常要排队。',
         pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '老凯俚酸汤鱼', gmap: '贵阳老城'
+        dianpingKeyword: '玉珍酸笋火锅', gmap: '玉珍酸笋火锅 北京路 贵阳'
+      },
+      {
+        name: '备选 · 三桥红牌铁板烧', lat: 26.5900, lng: 106.6700, type: 'food', time: '—',
+        desc: '云岩区三桥北路139号（近地铁2号线改茶站）；从老城打车约20分钟。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '三桥红牌铁板烧', gmap: '三桥红牌铁板烧 贵阳'
       },
       {
         name: '青云市集夜市', lat: 26.5685, lng: 106.7113, type: 'spot', time: '20:30',
@@ -463,10 +499,10 @@ const DAYS = [
         xhsKeyword: '贵阳黔灵山公园', gmap: '贵阳黔灵山公园'
       },
       {
-        name: '晚餐 · 贵阳老城', lat: 26.5835, lng: 106.7105, type: 'food', time: '18:30',
-        desc: '丝娃娃/酸汤鱼/烙锅，随口味挑；想夜市去青云市集。',
+        name: '晚餐 · 鸡鸣三生烤鸡店', lat: 26.5880, lng: 106.7120, type: 'food', time: '18:30',
+        desc: '云岩区黔灵东路82号（近省府西路口）；黔灵山下来正好接上，烤鸡配小酒。',
         pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '丝恋红汤丝娃娃', gmap: '贵阳老城'
+        dianpingKeyword: '鸡鸣三生烤鸡', gmap: '鸡鸣三生 贵阳黔灵东路'
       },
       {
         name: '贵阳酒店（第2晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '21:00',
@@ -517,7 +553,7 @@ const DAYS = [
     ]
   },
   {
-    id: 8, label: '吃', date: '安顺 / 贵阳 · 收藏清单', title: '吃喝清单（你们点名要试的）', color: '#ff2d55',
+    id: 8, label: '吃', date: '安顺 / 贵阳 · 收藏清单（已按天就近排入）', title: '吃喝清单（你们点名要试的）', color: '#ff2d55',
     locations: [
       {
         name: '宫鼎茶（安顺本土奶茶）', lat: 26.2460, lng: 105.9450, type: 'drink', time: '—',
