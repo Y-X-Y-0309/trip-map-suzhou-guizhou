@@ -515,6 +515,77 @@ const DAYS = [
         gmap: '贵阳龙洞堡国际机场'
       }
     ]
+  },
+  {
+    id: 8, label: '吃', date: '安顺 / 贵阳 · 收藏清单', title: '吃喝清单（你们点名要试的）', color: '#ff2d55',
+    locations: [
+      {
+        name: '宫鼎茶（安顺本土奶茶）', lat: 26.2460, lng: 105.9450, type: 'drink', time: '—',
+        desc: '安顺本土茶饮，包装带黄果树/屯堡元素，还有金刺梨口味；市区门店多，顺路买一杯。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '宫鼎茶', xhsKeyword: '安顺宫鼎茶', gmap: '宫鼎茶 安顺'
+      },
+      {
+        name: '刘老实片片鱼 · 芒果冰浆', lat: 26.2445, lng: 105.9430, type: 'drink', time: '—',
+        desc: '酸汤片片鱼老牌馆子，招牌之后来一杯芒果冰浆（糯米冰浆打法，绵密带咬劲）。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '刘老实片片鱼', xhsKeyword: '刘老实片片鱼 芒果冰浆', gmap: '刘老实片片鱼 安顺'
+      },
+      {
+        name: '新天地 · 黔浆记冰浆', lat: 26.2455, lng: 105.9480, type: 'drink', time: '—',
+        desc: '安顺糯米冰浆代表店，在市区新天地商业街一带；推荐芒果味，冰爽解辣。',
+        pay: { alipay: 1, wechat: 1, cash: 0.5 },
+        dianpingKeyword: '黔浆记冰浆', xhsKeyword: '安顺黔浆记冰浆', gmap: '黔浆记冰浆 安顺新天地'
+      },
+      {
+        name: '远山烧椒牛肉', lat: 26.2470, lng: 105.9460, type: 'food', time: '—',
+        desc: '安顺：烧椒+牛肉，本地口碑店，下饭。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '远山烧椒牛肉', gmap: '远山烧椒牛肉 安顺'
+      },
+      {
+        name: '花江活鱼王', lat: 26.2430, lng: 105.9470, type: 'food', time: '—',
+        desc: '安顺：活鱼现杀，花江风味鱼锅。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '花江活鱼王', gmap: '花江活鱼王 安顺'
+      },
+      {
+        name: '伍毛烧烤', lat: 26.2465, lng: 105.9445, type: 'food', time: '—',
+        desc: '安顺：夜宵烧烤，适合晚饭之后接着吃。',
+        pay: { cash: 0.5, alipay: 1, wechat: 1 },
+        dianpingKeyword: '伍毛烧烤', gmap: '伍毛烧烤 安顺'
+      },
+      {
+        name: '黔味红豆火锅野菜馆', lat: 26.2480, lng: 105.9455, type: 'food', time: '—',
+        desc: '安顺：红豆火锅+野菜，口味相对温和。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '黔味红豆火锅野菜馆', gmap: '黔味红豆火锅野菜馆 安顺'
+      },
+      {
+        name: '朱古记关岭带皮牛肉馆', lat: 26.2440, lng: 105.9490, type: 'food', time: '—',
+        desc: '安顺：关岭带皮牛肉（清汤/黄焖），本地特色牛馆。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '朱古记关岭带皮牛肉馆', gmap: '朱古记关岭带皮牛肉 安顺'
+      },
+      {
+        name: '玉珍酸笋火锅（北京路店）', lat: 26.5945, lng: 106.7065, type: 'food', time: '—',
+        desc: '贵阳云岩区北京路银海元隆10栋底商，近黔灵山公园；酸笋锅底，常要排队。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '玉珍酸笋火锅', gmap: '玉珍酸笋火锅 北京路 贵阳'
+      },
+      {
+        name: '鸡鸣三生烤鸡店', lat: 26.5880, lng: 106.7120, type: 'food', time: '—',
+        desc: '贵阳云岩区黔灵东路82号（近省府西路口）；烤鸡配小酒，适合晚上。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '鸡鸣三生烤鸡', gmap: '鸡鸣三生 贵阳黔灵东路'
+      },
+      {
+        name: '三桥红牌铁板烧', lat: 26.5900, lng: 106.6700, type: 'food', time: '—',
+        desc: '贵阳云岩区三桥北路139号（近地铁2号线改茶站）；铁板烧老店。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '三桥红牌铁板烧', gmap: '三桥红牌铁板烧 贵阳'
+      }
+    ]
   }
 ];
 
@@ -540,7 +611,7 @@ function overviewContent() {
 <div class="pay-summary"><h4 class="warn">末班车红线</h4>D4（10/2）格凸河：紫云→安顺客运末班约17:30-18:00，最晚15:00必须出景区返程。</div>
 <div class="pay-summary"><h4 class="warn">行李动线</h4>全程只需搬 2 次行李：9/29 机场→安顺、10/3 安顺→贵阳；其余每天当日往返，行李都留酒店。10/5 在贵阳玩，把行李寄存在贵阳北站智能柜（约10-20元/天）。</div>
 <div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>上海↔贵阳机票、酒店提前订（经济型房紧）；动车票（9/29 贵阳北→安顺西、10/3 安顺西→贵阳北）在12306抢；格凸河门票官方预约；羊皮洞提前下载离线轨迹；野点备少量现金。</div>
-<div class="pay-summary"><h4>地图说明</h4>坐标已尽量校准到 OSM 徒步道口/村点；仍标注“近似”的为乡镇级坐标，导航请以卡片内“高德”为准（直接搜店名/点位更稳）。餐厅候选为网络初筛，出发前请以大众点评当日评分与排队为准。</div>
+<div class="pay-summary"><h4>地图说明</h4>坐标已尽量校准到 OSM 徒步道口/村点；仍标注“近似”的为乡镇级坐标，导航请以卡片内“高德”为准（直接搜店名/点位更稳）。餐厅候选为网络初筛，出发前请以大众点评当日评分与排队为准。<br>最后一个标签“吃”是你们点名的安顺/贵阳吃喝清单（座位坐标为片区近似，导航请点卡片上的点评/高德按钮）。</div>
 <div class="section-head">图例</div>
 <div class="legend">
   <div class="legend-item"><div class="legend-dot" style="background:var(--tint-red)"></div>餐厅</div>
