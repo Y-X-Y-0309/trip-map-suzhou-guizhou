@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>上海→贵州西线 · 7天6晚小众野行地图</title>
-<meta name="description" content="羊皮洞瀑布/铜鼓荡/大圣之眼/牛倒岩/万峰顶/桃子凹/紫云格凸河 · 贵阳安顺双大本营 · 2026国庆参考行程">
+<meta name="description" content="羊皮洞瀑布/铜鼓荡/大圣之眼/牛倒岩/万峰顶/落月洞/关岭冰臼 · 安顺3晚+贵阳3晚 · 2026国庆参考行程">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="stylesheet" href="assets/libs/leaflet.css" />
@@ -237,7 +237,7 @@ a:hover { text-decoration: underline; }
 // ║  REPLACE THIS SECTION — Hotel and Days data                 ║
 // ╚══════════════════════════════════════════════════════════════╝
 
-const HOTEL = { name: '大本营：安顺(4晚)+贵阳(2晚)', lat: 26.2465, lng: 105.9465 };
+const HOTEL = { name: '大本营：安顺(3晚)+贵阳(3晚)', lat: 26.2465, lng: 105.9465 };
 
 const DAYS = [
   { id: 0, label: '总览', color: '#0071e3', locations: [] },
@@ -251,21 +251,14 @@ const DAYS = [
         gmap: '贵阳龙洞堡国际机场'
       },
       {
-        name: '安顺大本营（待订，连住4晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '22:30',
+        name: '安顺大本营（待订，连住3晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '22:30',
         desc: '推荐西秀区老城/高铁站片区，经济型人均300-400/晚。',
-        detail: '9/29-10/2 连住4晚：把安顺当大本营，后面几天徒步只带小背包，大件行李全程留酒店。',
+        detail: '9/29-10/1 连住3晚：把安顺当大本营，徒步只带小背包，大件行李留酒店。10/2 退房带行李去关岭。',
         pay: { alipay: 1, wechat: 1 }, gmap: '安顺市西秀区'
       },
       {
-        name: '夜宵 · 酒店附近（可选）', lat: 26.2460, lng: 105.9455, type: 'food', time: '23:00',
-        desc: '到得晚，就在酒店附近找碗羊肉粉/砂锅粉；顾府街夜市多数已收摊。',
-        detail: '安顺小吃正式开吃放到明天。',
-        pay: { alipay: 1, wechat: 1, cash: 0.5 },
-        dianpingKeyword: '安顺羊肉粉', gmap: '安顺市西秀区'
-      },
-      {
-        name: '备选 · 伍毛烧烤（夜宵）', lat: 26.2465, lng: 105.9445, type: 'food', time: '—',
-        desc: '安顺夜宵烧烤，市区内；到得早可以去接一顿。',
+        name: '夜宵 · 伍毛烧烤', lat: 26.2465, lng: 105.9445, type: 'food', time: '23:00',
+        desc: '安顺夜宵烧烤，市区内；落地后想吃就去，太晚则以酒店附近为主。',
         pay: { cash: 0.5, alipay: 1, wechat: 1 },
         dianpingKeyword: '伍毛烧烤', gmap: '伍毛烧烤 安顺'
       },
@@ -311,11 +304,10 @@ const DAYS = [
         xhsKeyword: '安顺牛倒岩', gmap: '安顺牛倒岩'
       },
       {
-        name: '午餐 · 幺铺毛肚火锅', lat: 26.1708, lng: 105.8480, type: 'food', time: '14:30',
-        desc: '幺铺老街老店：鲜毛肚“七上八下”现烫+带皮牛肉+糊辣椒蘸水。',
-        detail: '正好在去万峰顶的路上（大圣之眼→幺铺约20-30分钟）。\n不想坐下来吃就买路餐，直接去万峰顶。',
-        pay: { alipay: 1, wechat: 1, cash: 0.5 },
-        dianpingKeyword: '幺铺毛肚火锅', gmap: '幺铺镇 毛肚火锅'
+        name: '午餐 · 自备路餐（幺铺镇简餐）', lat: 26.1708, lng: 105.8480, type: 'food', time: '14:30',
+        desc: '今天路上没有靠谱馆子：出发前在安顺买好干粮和水，或在幺铺镇吃碗粉。',
+        detail: '晚上回安顺再好好吃一顿（已排远山烧椒牛肉）。',
+        dianping: false, gmap: '幺铺镇 安顺'
       },
       {
         name: '万峰顶 · 午后', lat: 26.1514, lng: 105.8037, type: 'spot', time: '16:00',
@@ -330,12 +322,6 @@ const DAYS = [
         desc: '安顺本地口碑店：烧椒+牛肉，下饭；爬完一天正好补一顿。',
         pay: { alipay: 1, wechat: 1 },
         dianpingKeyword: '远山烧椒牛肉', gmap: '远山烧椒牛肉 安顺'
-      },
-      {
-        name: '备选 · 夺夺粉（顾府街商圈）', lat: 26.2460, lng: 105.9455, type: 'food', time: '—',
-        desc: '老字号：龙老太味全夺夺粉 / 笔记安顺夺夺粉，酸辣砂锅。',
-        pay: { alipay: 1, wechat: 1, cash: 0.5 },
-        dianpingKeyword: '龙老太味全夺夺粉', gmap: '安顺顾府街'
       },
       {
         name: '备选 · 新天地 · 黔浆记冰浆', lat: 26.2455, lng: 105.9480, type: 'drink', time: '—',
@@ -353,164 +339,138 @@ const DAYS = [
       },
       {
         name: '安顺大本营（第2晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '20:00',
-        desc: '回酒店休息，明天去格凸河要早起。',
+        desc: '回酒店休息，明天去落月洞（20-30分钟车程），不用太早。',
         pay: { alipay: 1, wechat: 1 }, gmap: '安顺市西秀区'
       }
     ]
   },
   {
-    id: 3, label: 'D3', date: '10/1 周四 · 国庆', title: '紫云格凸河 · 穿洞探洞', color: '#34c759',
+    id: 3, label: 'D3', date: '10/1 周四 · 国庆', title: '落月洞 · 洞穴探险（安顺近郊）', color: '#34c759',
     locations: [
       {
-        name: '安顺→格凸河（当日往返）', lat: 26.2465, lng: 105.9465, type: 'transport', time: '07:30',
-        desc: '班车两段约2-2.5h，或网约车直达约1.5-2h（单程约200-300元）。',
-        detail: '班车：安顺客运东站→紫云县城（20-30元）→转乡村中巴到格凸河（10-15元）。\n国庆假期出行，班车会排队，建议早出发或直接包单日车。\n红线：紫云→安顺末班车约17:30-18:00，最晚15:00出景区。\n行李留安顺酒店，轻装出发。',
-        gmap: '安顺客运东站'
+        name: '安顺→落月洞（宁谷镇）', lat: 26.2465, lng: 105.9465, type: 'transport', time: '09:00',
+        desc: '市区出发约9km、20-30分钟（导航“落月洞/宁谷镇老塘河村”）。',
+        detail: '今天不赶路，睡饱再出发；国庆探洞项目建议提前预约。',
+        gmap: '宁谷镇 安顺'
       },
       {
-        name: '紫云格凸河 · 大穿洞/燕子洞', lat: 25.7712, lng: 106.1739, type: 'spot', time: '10:00',
-        desc: '通票含门票+观光车+游船+表演，约150元/人；116米高天然溶洞拱门。',
-        budget: '通票约¥150/人',
-        detail: '看点：万燕群飞（晨昏）、苗族“蜘蛛人”徒手攀岩、悬棺；9-3月清晨8-9点偶遇“天神光”。\n洞内恒温湿滑：防滑鞋+薄外套；燕子洞防鸟粪建议戴帽。\n（坐标为格凸河水段近似，导航搜“紫云格凸河风景名胜区”）',
+        name: '落月洞 · 探洞基地', lat: 26.2098, lng: 105.9838, type: 'spot', time: '09:30',
+        desc: '喀斯特旱水双溶洞，光柱洒进洞口像月光垂落；洞内常年十几度。',
+        budget: '探洞项目另计（飞拉达/桨板/绳降等）',
+        detail: '玩法：洞穴徒步（头灯）、洞穴飞拉达、洞内天梯、地下暗河桨板、绳降，都有教练带，零基础可玩。\n装备：薄外套（洞内凉）+防滑防水鞋；别自行进未开发支洞。\n半天足够，中午在基地/宁谷镇简单吃，下午回市区休整。',
         pay: { alipay: 1, wechat: 1 },
-        xhsKeyword: '紫云格凸河 大穿洞', gmap: '紫云格凸河风景名胜区'
+        xhsKeyword: '安顺落月洞', gmap: '落月洞 安顺宁谷镇'
       },
       {
-        name: '午餐 · 景区周边/紫云县城简餐', lat: 25.7517, lng: 106.0806, type: 'food', time: '—',
-        desc: '景区外农家菜或紫云县城解决，选择偏简朴，也可带路餐。',
-        dianping: false, gmap: '紫云县'
-      },
-      {
-        name: '晚餐 · 刘老实片片鱼（含芒果冰浆）', lat: 26.2445, lng: 105.9430, type: 'food', time: '19:30',
-        desc: '格凸河回来吃鱼：老牌片片鱼/酸汤鱼，招牌之后来一杯芒果冰浆。',
-        pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '刘老实片片鱼', gmap: '刘老实片片鱼 安顺'
-      },
-      {
-        name: '备选 · 花江活鱼王', lat: 26.2430, lng: 105.9470, type: 'food', time: '—',
-        desc: '同为正餐鱼锅：活鱼现杀，花江风味，二选一。',
-        pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '花江活鱼王', gmap: '花江活鱼王 安顺'
-      },
-      {
-        name: '安顺大本营（第3晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '21:00',
-        desc: '回酒店休息；明天弹性日，可以睡个懒觉。',
-        pay: { alipay: 1, wechat: 1 }, gmap: '安顺市西秀区'
-      }
-    ]
-  },
-  {
-    id: 4, label: 'D4', date: '10/2 周五', title: '安顺弹性日 · 三选一（轻松）', color: '#af52de',
-    locations: [
-      {
-        name: '弹性日 · 三选一（不赶路）', lat: 26.2465, lng: 105.9465, type: 'transport', time: '全天',
-        desc: '今天不排硬行程：龙宫半天 / 织金洞一天 / 安顺老城闲逛，当天按体力和天气定。',
-        detail: '推荐：不想折腾又想看溶洞→龙宫（市区40-50分钟）；愿意跑远看顶级溶洞→织金洞；想完全轻松→安顺老城吃小吃、逛文庙。\n行李继续留酒店，今晚仍住安顺，明天一早转场贵阳。',
-        gmap: '安顺市西秀区'
-      },
-      {
-        name: '备选A · 龙宫风景区', lat: 26.1105, lng: 105.8803, type: 'spot', time: '—',
-        desc: '溶洞+地下暗河游船（5A），离安顺40-50分钟，玩半天刚好。',
-        budget: '门票约¥130/人（含游船）',
-        detail: '国庆旅行团多，建议 8:30 前到；洞内湿滑带防滑鞋。',
-        pay: { alipay: 1, wechat: 1 },
-        xhsKeyword: '安顺龙宫风景区', gmap: '安顺龙宫风景区'
-      },
-      {
-        name: '备选B · 织金洞', lat: 26.7760, lng: 105.8950, type: 'spot', time: '—',
-        desc: '“中国最美旅游洞穴”，单程1.5-2小时，来回+游览要一整天。',
-        budget: '门票约¥120/人',
-        detail: '想去就早出发；洞内恒温10-16℃，带薄外套和防滑鞋。\n（坐标为景区近似，导航搜“织金洞”）',
-        pay: { alipay: 1, wechat: 1 },
-        xhsKeyword: '织金洞', gmap: '织金洞'
-      },
-      {
-        name: '备选C · 安顺古城 · 文庙/儒林路', lat: 26.2448, lng: 105.9435, type: 'spot', time: '—',
-        desc: '不想跑远就逛老城：文庙、儒林路一带，小吃密度高。',
-        budget: '免费',
-        xhsKeyword: '安顺古城 儒林路', gmap: '安顺儒林路'
+        name: '午餐 · 就近（自选）', lat: 26.2098, lng: 105.9838, type: 'food', time: '—',
+        desc: '基地或宁谷镇简单解决，也可回市区吃。',
+        dianping: false, gmap: '宁谷镇 安顺'
       },
       {
         name: '晚餐 · 黔味红豆火锅野菜馆', lat: 26.2480, lng: 105.9455, type: 'food', time: '18:30',
-        desc: '红豆火锅+野菜，口味相对温和；弹性日晚上吃不累的。',
+        desc: '红豆火锅+野菜，口味相对温和，玩一天回来吃不累。',
         pay: { alipay: 1, wechat: 1 },
         dianpingKeyword: '黔味红豆火锅野菜馆', gmap: '黔味红豆火锅野菜馆 安顺'
       },
       {
         name: '备选 · 朱古记关岭带皮牛肉馆', lat: 26.2440, lng: 105.9490, type: 'food', time: '—',
-        desc: '安顺特色牛馆：关岭带皮牛肉（清汤/黄焖）。',
+        desc: '安顺特色牛馆：关岭带皮牛肉（清汤/黄焖）；明天去关岭，先吃也行。',
         pay: { alipay: 1, wechat: 1 },
         dianpingKeyword: '朱古记关岭带皮牛肉馆', gmap: '朱古记关岭带皮牛肉 安顺'
       },
       {
-        name: '备选 · 伍毛烧烤（夜宵）', lat: 26.2465, lng: 105.9445, type: 'food', time: '—',
-        desc: '安顺夜宵烧烤，市区内；逛完老城可以接一顿。',
-        pay: { cash: 0.5, alipay: 1, wechat: 1 },
-        dianpingKeyword: '伍毛烧烤', gmap: '伍毛烧烤 安顺'
+        name: '备选 · 新天地 · 黔浆记冰浆', lat: 26.2455, lng: 105.9480, type: 'drink', time: '—',
+        desc: '饭后甜饮：安顺糯米冰浆代表店，新天地商业街，推荐芒果味。',
+        pay: { alipay: 1, wechat: 1, cash: 0.5 },
+        dianpingKeyword: '黔浆记冰浆', xhsKeyword: '安顺黔浆记冰浆', gmap: '黔浆记冰浆 安顺新天地'
       },
       {
-        name: '安顺大本营（第4晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '20:30',
-        desc: '最后一晚安顺；收拾好行李，明天转场贵阳。',
+        name: '安顺大本营（第3晚）', lat: 26.2465, lng: 105.9465, type: 'hotel', time: '20:30',
+        desc: '最后一晚安顺；收拾行李，明天退房去关岭冰臼。',
         pay: { alipay: 1, wechat: 1 }, gmap: '安顺市西秀区'
       }
     ]
   },
   {
-    id: 5, label: 'D5', date: '10/3 周六', title: '转场贵阳 · 市区吃逛', color: '#ff9500',
+    id: 4, label: 'D4', date: '10/2 周五', title: '退房 · 关岭冰臼 → 转场贵阳', color: '#af52de',
     locations: [
       {
-        name: '安顺西→贵阳北（动车）', lat: 26.2021, lng: 105.8723, type: 'transport', time: '09:00',
-        desc: '退房后坐动车回贵阳（约30-40分钟），先把行李放酒店。',
-        detail: '国庆车票提前在12306订。\n贵阳连住 2 晚（10/3、10/4），行李一次安顿好。',
-        gmap: '安顺西站'
+        name: '退房出发 · 安顺→关岭冰臼', lat: 26.2465, lng: 105.9465, type: 'transport', time: '08:00',
+        desc: '退房带行李出发，65-75km/约1小时（沪昆高速往关岭方向）。',
+        detail: '今天行李随身或放车内；冰臼玩完直接去关岭站坐动车到贵阳。\n导航搜“关岭冰臼地上停车场/关脚村”，停车约10元。',
+        gmap: '关岭冰臼 断桥镇'
       },
       {
-        name: '贵阳酒店（待订，住2晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '10:30',
-        desc: '推荐老城喷水池/大十字地铁沿线，经济型；后面两天都住这。',
-        detail: '放行李后就在老城活动，今天不安排远途。',
+        name: '关岭冰臼（枯水期看点）', lat: 25.9550, lng: 105.6750, type: 'spot', time: '09:30',
+        desc: '免费 · 打邦河床上的冰臼群，10月-次年4月枯水期最漂亮。',
+        budget: '免费（停车约10元；村民接驳车约10元/人）',
+        detail: '走法：停车场→约1.5km水泥路→关脚电站附近下切河床→冰臼群核心区原路返回，精华段3-4km/2-3小时；有力气可走8-10km深线（4-5小时）。\n装备：防滑徒步鞋或溯溪鞋（青苔湿石极滑）、登山杖、2L水与路餐；沿途无补给。\n安全红线：主汛期/暴雨或上游水电站泄洪时严禁进入河床；水潭深浅不明，别下水、别靠近湿滑深潭边缘。\n信号弱，建议结伴并预先下载离线地图。',
+        pay: { cash: 0.5 },
+        xhsKeyword: '关岭冰臼', gmap: '关岭冰臼 关脚村'
+      },
+      {
+        name: '午餐 · 花江活鱼王', lat: 26.2430, lng: 105.9470, type: 'food', time: '13:00',
+        desc: '花江风味活鱼锅；关岭方向顺路吃，也可回安顺市区吃。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '花江活鱼王', gmap: '花江活鱼王 安顺'
+      },
+      {
+        name: '备选 · 刘老实片片鱼（含芒果冰浆）', lat: 26.2445, lng: 105.9430, type: 'food', time: '—',
+        desc: '老牌片片鱼+芒果冰浆，和花江二选一。',
+        pay: { alipay: 1, wechat: 1 },
+        dianpingKeyword: '刘老实片片鱼', gmap: '刘老实片片鱼 安顺'
+      },
+      {
+        name: '关岭站→贵阳北（动车）', lat: 25.9468, lng: 105.6175, type: 'transport', time: '16:00',
+        desc: '玩完直接去关岭站坐动车到贵阳北（约1小时），也可以先回安顺西再转。',
+        detail: '国庆车票提前在12306订（关岭→贵阳北 或 安顺西→贵阳北）。\n贵阳连住 3 晚（10/2、10/3、10/4）。\n（关岭站坐标为县城近似，导航搜“关岭站”）',
+        gmap: '关岭站'
+      },
+      {
+        name: '贵阳酒店（待订，住3晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '18:00',
+        desc: '推荐老城喷水池/大十字地铁沿线，经济型；后面三天都住这。',
+        detail: '放行李后就在老城活动。',
         pay: { alipay: 1, wechat: 1 }, gmap: '贵阳 大十字'
       },
       {
-        name: '午餐 · 金牌罗记肠旺面（蔡家街）', lat: 26.5852, lng: 106.7128, type: 'food', time: '12:00',
-        desc: '老字号肠旺面；不想吃面就换丝恋红汤丝娃娃。',
+        name: '晚餐 · 玉珍酸笋火锅（北京路店）', lat: 26.5945, lng: 106.7065, type: 'food', time: '19:30',
+        desc: '云岩区北京路银海元隆10栋底商；到贵阳第一顿，酸笋锅底，常要排队。',
         pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '金牌罗记肠旺面', gmap: '贵阳蔡家街'
-      },
+        dianpingKeyword: '玉珍酸笋火锅', gmap: '玉珍酸笋火锅 北京路 贵阳'
+      }
+    ]
+  },
+  {
+    id: 5, label: 'D5', date: '10/3 周六', title: '贵阳市区 · 吃逛', color: '#ff9500',
+    locations: [
       {
-        name: '甲秀楼 · 南明河', lat: 26.5808, lng: 106.7158, type: 'spot', time: '14:00',
-        desc: '白天看楼+沿南明河散步，旁边就是老城商圈。',
+        name: '甲秀楼 · 南明河', lat: 26.5808, lng: 106.7158, type: 'spot', time: '10:30',
+        desc: '贵阳地标：白天看楼+沿南明河散步，旁边就是老城商圈。',
         budget: '免费',
         xhsKeyword: '贵阳甲秀楼', gmap: '贵阳 甲秀楼'
       },
       {
-        name: '下午茶 · 老城咖啡馆', lat: 26.5820, lng: 106.7120, type: 'drink', time: '15:30',
-        desc: '老城/文昌阁一带咖啡馆多，坐着歇脚。',
-        pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '贵阳 咖啡馆', gmap: '贵阳老城'
+        name: '老城闲逛 · 文昌阁一带', lat: 26.5855, lng: 106.7130, type: 'spot', time: '13:00',
+        desc: '老城街区随便走走，茶馆/咖啡馆坐坐，节奏随意。',
+        budget: '免费',
+        xhsKeyword: '贵阳文昌阁', gmap: '贵阳老城'
       },
       {
-        name: '晚餐 · 玉珍酸笋火锅（北京路店）', lat: 26.5945, lng: 106.7065, type: 'food', time: '18:30',
-        desc: '云岩区北京路银海元隆10栋底商，离老城/黔灵山都近；酸笋锅底，常要排队。',
-        pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '玉珍酸笋火锅', gmap: '玉珍酸笋火锅 北京路 贵阳'
+        name: '备选 · 青岩古镇', lat: 26.3340, lng: 106.6825, type: 'spot', time: '—',
+        desc: '想出门走走：古镇约30km/50分钟，青岩猪脚、玫瑰糖。',
+        budget: '门票约¥10',
+        xhsKeyword: '青岩古镇', gmap: '青岩古镇'
       },
       {
-        name: '备选 · 三桥红牌铁板烧', lat: 26.5900, lng: 106.6700, type: 'food', time: '—',
-        desc: '云岩区三桥北路139号（近地铁2号线改茶站）；从老城打车约20分钟。',
+        name: '晚餐 · 三桥红牌铁板烧', lat: 26.5900, lng: 106.6700, type: 'food', time: '18:30',
+        desc: '云岩区三桥北路139号（近地铁2号线改茶站）；从老城打车约20分钟，专程去吃。',
         pay: { alipay: 1, wechat: 1 },
         dianpingKeyword: '三桥红牌铁板烧', gmap: '三桥红牌铁板烧 贵阳'
       },
       {
-        name: '青云市集夜市', lat: 26.5685, lng: 106.7113, type: 'spot', time: '20:30',
-        desc: '夜市逛吃：烤脑花、豆腐圆子、冰浆、裹卷。',
-        budget: '丰俭由人',
-        xhsKeyword: '贵阳青云市集', gmap: '贵阳青云市集'
-      },
-      {
-        name: '备选 · 青岩古镇', lat: 26.3340, lng: 106.6825, type: 'spot', time: '—',
-        desc: '下午想出门走走：古镇约30km/50分钟，青岩猪脚、玫瑰糖。',
-        budget: '门票约¥10',
-        xhsKeyword: '青岩古镇', gmap: '青岩古镇'
+        name: '贵阳酒店（第2晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '21:00',
+        desc: '明天 07:30 出发去羊皮洞，早点休息。',
+        pay: { alipay: 1, wechat: 1 }, gmap: '贵阳 大十字'
       }
     ]
   },
@@ -549,8 +509,8 @@ const DAYS = [
         dianpingKeyword: '鸡鸣三生烤鸡', gmap: '鸡鸣三生 贵阳黔灵东路'
       },
       {
-        name: '贵阳酒店（第2晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '21:00',
-        desc: '明天退房，玩到下午再去机场。',
+        name: '贵阳酒店（第3晚）', lat: 26.5850, lng: 106.7090, type: 'hotel', time: '21:00',
+        desc: '最后一天住贵阳；明天退房去机场。',
         pay: { alipay: 1, wechat: 1 }, gmap: '贵阳 大十字'
       }
     ]
@@ -565,10 +525,10 @@ const DAYS = [
         gmap: '贵阳北站'
       },
       {
-        name: '早午餐 · 贵阳小吃收尾', lat: 26.5852, lng: 106.7128, type: 'food', time: '11:30',
-        desc: '肠旺面 / 丝娃娃 / 酸汤鱼，把没吃到的补上。',
+        name: '早午餐 · 老城解决（自选）', lat: 26.5852, lng: 106.7128, type: 'food', time: '11:30',
+        desc: '老城随便吃一顿；你们点名的三家贵阳店如果前面没吃上，今天可以补一家（玉珍/鸡鸣三生/三桥红牌）。',
         pay: { alipay: 1, wechat: 1 },
-        dianpingKeyword: '丝恋红汤丝娃娃', gmap: '贵阳老城'
+        dianping: false, gmap: '贵阳老城'
       },
       {
         name: '老城闲逛 · 文昌阁一带', lat: 26.5855, lng: 106.7130, type: 'spot', time: '13:00',
@@ -675,9 +635,9 @@ const DAYS = [
 
 function overviewContent() {
   return `
-<div class="hero"><h1>上海→贵州西线 · 7天6晚小众野行</h1><p class="subtitle">羊皮洞瀑布 · 铜鼓荡 · 万峰顶 · 大圣之眼 · 牛倒岩 · 桃子凹 · 紫云格凸河 · 贵阳慢逛吃<br>9/29–10/5 · 2人经济型 · 无包车自驾</p></div>
+<div class="hero"><h1>上海→贵州西线 · 7天6晚小众野行</h1><p class="subtitle">羊皮洞瀑布 · 铜鼓荡 · 大圣之眼 · 牛倒岩 · 万峰顶 · 落月洞 · 关岭冰臼 · 贵阳吃逛<br>9/29–10/5 · 2人经济型 · 无包车自驾</p></div>
 <div class="info-grid">
-  <div class="info-card"><div class="label">大本营</div><div class="value">安顺4晚（9/29-10/2）+ 贵阳2晚（10/3-10/4）</div></div>
+  <div class="info-card"><div class="label">大本营</div><div class="value">安顺3晚（9/29-10/1）+ 贵阳3晚（10/2-10/4）</div></div>
   <div class="info-card"><div class="label">往返航班</div><div class="value">上海↔贵阳：去 9/29 19:55 到贵阳 / 回 10/5 20:05 贵阳起飞</div></div>
   <div class="info-card"><div class="label">交通方式</div><div class="value">城际动车为主 + 景点网约车当日往返，行李留酒店</div></div>
   <div class="info-card"><div class="label">人均预算</div><div class="value">往返大交通1200-2000 · 住宿约1300 · 门票餐费另计（以实际为准）</div></div>
@@ -685,12 +645,12 @@ function overviewContent() {
 <div class="section-head">行程概览</div>
 <div class="day-list">${DAYS.slice(1).map(d=>`<div class="card" onclick="go(${d.id})"><div class="name"><span class="dot" style="background:${d.color}"></span>${d.label} · ${d.title}</div><div class="desc">${d.date}</div></div>`).join('')}</div>
 <div class="section-head">重点提醒</div>
-<div class="pay-summary"><h4 class="warn">免费野点风险</h4>羊皮洞/铜鼓荡/大圣之眼/桃子凹均为未开发点位：无官方救援与门票管理，雨天禁入，垃圾随身带走，天黑前撤出。</div>
+<div class="pay-summary"><h4 class="warn">免费野点风险</h4>羊皮洞/铜鼓荡/大圣之眼/桃子凹/关岭冰臼均为未开发点位：无官方救援与门票管理，雨天禁入，垃圾随身带走，天黑前撤出。</div>
 <div class="pay-summary"><h4 class="warn">落地当晚转安顺</h4>9/29 落地后直接走：机场→贵阳北站→动车到安顺西（末班约22:45），赶不上就打车直达；当晚 22:30-23:00 能到酒店，别在贵阳多住一晚。</div>
 <div class="pay-summary"><h4 class="warn">羊皮洞要上午去</h4>往返约 5.5-6 小时（车程 3h + 徒步 1.5-2h + 停留 30-60min）：07:30 前出发，13:30-14:00 能回贵阳；下午去容易摸黑走盘山村道。</div>
-<div class="pay-summary"><h4 class="warn">末班车红线</h4>D3（10/1）格凸河：紫云→安顺客运末班约17:30-18:00，最晚15:00必须出景区返程。</div>
-<div class="pay-summary"><h4 class="warn">行李动线</h4>全程只需搬 2 次行李：9/29 机场→安顺、10/3 安顺→贵阳；其余每天当日往返，行李都留酒店。10/5 在贵阳玩，把行李寄存在贵阳北站智能柜（约10-20元/天）。</div>
-<div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>上海↔贵阳机票、酒店提前订（经济型房紧）；动车票（9/29 贵阳北→安顺西、10/3 安顺西→贵阳北）在12306抢；格凸河门票官方预约；羊皮洞提前下载离线轨迹；野点备少量现金。</div>
+<div class="pay-summary"><h4 class="warn">关岭冰臼红线</h4>暴雨或上游水电站泄洪时严禁进入河床；枯水期（10月-次年4月）才好看。10/2 玩完要赶动车，午后要留足去关岭站的时间。</div>
+<div class="pay-summary"><h4 class="warn">行李动线</h4>全程只需搬 2 次行李：9/29 机场→安顺、10/2 安顺→贵阳（退房当天带行李去关岭冰臼，玩完直接去关岭站坐动车）。10/5 在贵阳玩，把行李寄存在贵阳北站智能柜（约10-20元/天）。</div>
+<div class="pay-summary"><h4 class="ok-text">行前预订清单</h4>上海↔贵阳机票、酒店提前订（经济型房紧）；动车票（9/29 贵阳北→安顺西、10/2 关岭→贵阳北）在12306抢；落月洞探洞项目提前预约；羊皮洞/关岭冰臼 提前下载离线轨迹；野点备少量现金。</div>
 <div class="pay-summary"><h4>地图说明</h4>坐标已尽量校准到 OSM 徒步道口/村点；仍标注“近似”的为乡镇级坐标，导航请以卡片内“高德”为准（直接搜店名/点位更稳）。餐厅候选为网络初筛，出发前请以大众点评当日评分与排队为准。<br>最后一个标签“吃”是你们点名的安顺/贵阳吃喝清单（座位坐标为片区近似，导航请点卡片上的点评/高德按钮）。</div>
 <div class="section-head">图例</div>
 <div class="legend">
